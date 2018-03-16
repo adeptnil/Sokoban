@@ -1,6 +1,6 @@
 const gameBoard = document.getElementById("gameBoard");
 const playerDiv = document.createElement("div");
-playerDiv.id = "player"
+playerDiv.id = "player";
 
 const map = [
     "  WWWWW ",
@@ -14,7 +14,7 @@ const map = [
     "WWWWWWWW"
   ];
 
-
+  
 rowLoop:
 for (let iRow = 0; iRow < map.length; iRow++) {
     const mapRow = map[iRow];
@@ -60,21 +60,21 @@ document.addEventListener("keydown", (event) => {
   const keyName = event.key;
 
     if (keyName=="ArrowDown"){
-        boxtop+=10;
+        player+=50;
         }
     if (keyName=="ArrowUp"){
-        boxtop-=10;
+        player-=50;
         }
-        document.getElementById("box").style.top = boxtop + "px";
+        document.getElementById("player").style.left = player + "px";
 
 
     if (keyName=="ArrowLeft"){
-        boxleft-=10;
+        player-=50;
         }
     if (keyName=="ArrowRight"){
-        boxleft+=10;
+        player+=50;
         }
-        document.getElementById("box").style.left = boxleft + "px";
+        document.getElementById("player").style.top = player + "px";
 });
 
 
